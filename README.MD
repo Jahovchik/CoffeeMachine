@@ -1,6 +1,7 @@
 Coffee machine
 
 postgresql:
+DB=coffeemachine
 username=admin
 password=1234
 
