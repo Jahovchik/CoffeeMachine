@@ -32,7 +32,9 @@ public class Order {
     private GrindSize grindSize;
 
     @Column(name = "temperature")
-    private Integer temperature;
+    @Min(value = 88, message = "Temperature below 88 is not supported")
+    @Max(value = 96, message = "Temperature above 96 is not supported")
+    private int temperature = 92;
 
     @Column(name = "completed")
     private Boolean completed = false;
