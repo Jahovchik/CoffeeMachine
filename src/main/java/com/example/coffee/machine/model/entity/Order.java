@@ -28,8 +28,8 @@ public class Order {
     @Column(name = "strong")
     private Boolean strong;
 
-    @Column(name = "grind_size")
-    private GrindSize grindSize;
+    @Column(name = "grind_size", columnDefinition = "character(1) default 'M'")
+    private GrindSize grindSize = GrindSize.MEDIUM;
 
     @Column(name = "temperature")
     @Min(value = 88, message = "Temperature below 88 is not supported")
