@@ -26,7 +26,7 @@ public class Order {
     private EspressoBasedCoffeeType coffeeType;
 
     @Column(name = "strong")
-    private Boolean strong;
+    private boolean strong = false;
 
     @Column(name = "grind_size")
     private GrindSize grindSize;
